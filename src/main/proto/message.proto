@@ -1,0 +1,5 @@
+syntax = "proto2";
+option java_outer_classname = "ProtoBean";
+message Table {
+    optional string text = 1;
+}
