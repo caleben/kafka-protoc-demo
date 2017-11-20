@@ -8,7 +8,7 @@ package kfkprotoc.synway;
 public class ConsumerRun {
   public static void main(String[] args) {
     String consuConf = "consumer.properties";
-    ConsumerHandler ct = new ConsumerHandler("mytest2", consuConf);
+    ConsumerTask ct = new ConsumerTask("mytest2", consuConf);
     ct.execute();
   }
 }
