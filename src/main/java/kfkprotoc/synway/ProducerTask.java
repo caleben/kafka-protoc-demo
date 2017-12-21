@@ -42,7 +42,7 @@ public class ProducerTask implements Runnable {
       try {
         FileInputStream fis = new FileInputStream(file);
         StringBuilder sb = new StringBuilder();
-        System.out.println("开始处理文件： " + file.getName() + " ...");
+        System.out.println("开始发送文件： " + file.getName() + " ...");
         while ((len = fis.read(buf)) != -1) {
           sb.append(new String(buf, 0, len));
         }
@@ -60,6 +60,7 @@ public class ProducerTask implements Runnable {
         e.printStackTrace();
       }
     }
+    System.out.printf("已成功发送 %d 个文件。", count);
     producer.close();
   }
 }
