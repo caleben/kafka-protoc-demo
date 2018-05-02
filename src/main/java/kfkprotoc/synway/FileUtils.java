@@ -10,9 +10,8 @@ import java.util.List;
  * @description: File操作工具类
  */
 public class FileUtils {
-
+  static List<File> list = new ArrayList<>();
   public static List<File> getAllFiles(String path) {
-    List<File> list = new ArrayList<>();
     File file = new File(path);
     File[] files = file.listFiles();
     assert files != null : "path doesn't exists";
